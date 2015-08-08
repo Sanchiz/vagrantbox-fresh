@@ -35,7 +35,8 @@ Host key verification failed.
 Use following commands:
 ```sh
 ssh-keygen -R 192.168.77.77
-ssh root@192.168.77.77
+ssh-copy-id root@192.168.77.77
+# enter "root" as password
 ```
 
 
