@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: Enable root login
+      sudo: yes
+      copy: src=files/sshd_config dest=/etc/ssh/sshd_config force=yes owner=root group=root mode=0644
+
+    - name: Restart ssh
+      service: name=ssh state=restarted
